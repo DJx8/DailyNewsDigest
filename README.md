@@ -2,7 +2,7 @@
 
 A Streamlit web application that classifies and summarizes news articles based on their URL input.
 
-**Live Demo**: [Visit App on Hugging Face]([[(https://huggingface.co/spaces/Deejay888/News_Classifier)]])
+**Live Demo**: [Visit App on Hugging Face](https://huggingface.co/spaces/Deejay888/News_Classifier)
 
 ## What It Does
 
