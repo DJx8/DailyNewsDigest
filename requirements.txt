@@ -1,9 +1,0 @@
-streamlit
-nltk
-scikit-learn
-joblib
-networkx
-requests
-beautifulsoup4
-pandas
-
