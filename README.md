@@ -1,4 +1,3 @@
-```markdown
 # Daily News Digest - Web App
 
 A Streamlit web application that classifies and summarizes news articles based on their URL input.
@@ -26,6 +25,6 @@ A Streamlit web application that classifies and summarizes news articles based o
 - Hugging Face Spaces (deployment)
 
 ## Project Files
-app.py # Web interface
-requirements.txt # All dependencies
-news_classifier.joblib # Trained ML model
+- app.py # Web interface
+- requirements.txt # All dependencies
+- news_classifier.joblib # Trained ML model
