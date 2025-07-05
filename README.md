@@ -1,30 +1,52 @@
-# Daily News Digest - Web App
+# Daily News Digest - Gradio App
 
-A Streamlit web application that classifies and summarizes news articles based on their URL input.
+A Gradio-powered web application that fetches, classifies, and summarizes news articles from RSS feeds based on a selected date.
 
-**Live Demo**: [Visit App on Hugging Face](https://huggingface.co/spaces/Deejay888/News_Classifier)
+**🔗 Live Demo**: [Visit App on Hugging Face](https://huggingface.co/spaces/Deejay888/News_Classifier)  
+
+---
 
 ## What It Does
 
-- Takes a live news article URL
-- Classifies the category (e.g., World, Sports, Business, Sci/Tech)
-- Generates a 2-line summary using TF-IDF + PageRank
+- Accepts a date input (`YYYY-MM-DD`)
+- Fetches top 3 articles per category from **The Hindu** RSS feeds:
+  - 🌍 World
+  - 💼 Business
+  - 🏏 Sports
+  - 🔬 Sci/Tech
+- Uses a trained **Naive Bayes classifier** to predict the article's category
+- Summarizes each article using **TF-IDF + PageRank-based Extractive Summarizer**
+
+---
 
 ## Backend Model
 
-- Pretrained Naive Bayes Classifier (`news_classifier.joblib`)
-- Custom Extractive Summarizer
+- **Classifier**: `news_classifier.joblib`  
+  - Built using TF-IDF vectors + Naive Bayes
+- **Summarizer**: 
+  - Extractive summarization based on cosine similarity and PageRank
+  - Generates short summaries (2 lines or up to 40 words)
+
+---
 
 ## Tech Stack
 
-- Python
-- Streamlit
-- Scikit-learn
-- NLTK (replaced with custom cleaner)
-- BeautifulSoup (for scraping)
-- Hugging Face Spaces (deployment)
+-  Python
+-  Scikit-learn
+-  Newspaper3k (for scraping articles)
+-  NetworkX (for PageRank graph)
+-  Feedparser (for parsing RSS feeds)
+-  NLTK (for text preprocessing)
+-  Gradio (for interactive UI)
+-  Hugging Face Spaces (for deployment)
+
+---
 
 ## Project Files
-- app.py # Web interface
-- requirements.txt # All dependencies
-- news_classifier.joblib # Trained ML model
+
+- `app.py` – Main application code (Gradio UI + logic)
+- `news_classifier.joblib` – Pretrained text classification model
+- `requirements.txt` – All dependencies for setting up the environment
+
+---
+
