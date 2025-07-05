@@ -12,7 +12,6 @@
 - Achieved ~88% accuracy
 - Built extractive summarizer using sentence ranking (PageRank)
 - Evaluated with classification_report
-- Faced `newspaper3k` issue; switched to BeautifulSoup
 
 ## Week 3: Finalization & Deployment
 - Created working Streamlit UI (Hugging Face Spaces)
