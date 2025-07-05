@@ -1,7 +1,0 @@
-gradio
-newspaper3k
-scikit-learn
-nltk
-networkx
-joblib
-lxml_html_clean
